@@ -4,7 +4,16 @@
  * the function should return a promise just like before
  */
 
+// const performance = require()
+
 function sleep(milliseconds) {
+    let busyTime = Date.now() + milliseconds
+    return new Promise((resolve, reject) => {
+        while (Date.now() < busyTime) {
+            console.log("busy");
+        }
+        resolve();
+    })
 }
 
 module.exports = sleep;
