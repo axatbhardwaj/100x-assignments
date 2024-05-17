@@ -9,4 +9,5 @@ class Animal {
   }
 }
 
-
+let ss = new Animal('Snake', 0)
+console.log(ss.describe()) // 'Snake has 0 legs'
